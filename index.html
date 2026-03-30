@@ -24,10 +24,21 @@
        <h1 class="center">Digital Project Portfolio & Archives</h1>
        <p class="center">Dokumentasi seluruh proyek dan inovasi dari berbagai divisi di Information Technology Club UPN Veteran Yogyakarta.</p>
     </div>
+
+    <div class="row d-grid col-md-2 mb-5 mx-auto">
+        <button type="button" class="btn btn-success center shadow fw-semibold" data-bs-toggle="modal" data-bs-target="#modalInput">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rocket-takeoff-fill me-2" viewBox="0 0 16 16">
+            <path d="M12.17 9.53c2.307-2.592 3.253-6.42 3.253-6.42a.566.566 0 0 0-.522-.523s-3.828.946-6.42 3.253c-2.101 1.87-3.141 4.483-3.228 5.627L2.403 14.33a.818.818 0 0 0 1.17 1.17l2.873-2.85c1.144-.087 3.757-1.127 5.627-3.227l.097-.097Zm-1.882-1.37a1.28 1.28 0 1 1-1.812-1.81 1.28 1.28 0 0 1 1.812 1.81Z"/>
+            <path d="M.887 6.272c.11-.01.21-.05.28-.116L2.4 4.92l.471.241a.5.5 0 0 0 .734-.37l.641-3.03a.5.5 0 0 0-.553-.594L.664 1.81a.5.5 0 0 0-.37.734l.241.472L.154 4.542a.25.25 0 0 0 .167.391l.566.073Zm1.43 3.012c-.01.11-.05.21-.116.28L.968 10.8l.241.471a.5.5 0 0 0 .37.734l3.03.641a.5.5 0 0 0 .594-.553l-.641-3.03a.5.5 0 0 0-.734-.37l-.472.241-1.211-.38a.25.25 0 0 0-.391.167l-.073.566Z"/>
+        </svg>
+        Submit Your Project
+        </button>
+    </div>
+
     <div class="container text-left mt-3">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 shadow-sm" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalDetail1">
                     <img src="./assets/img/no-image.jpg" class="card-img-top card-img-ratio" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -109,7 +120,123 @@
         </div>
     </div>
 </main>
-    
+
+<!-- Modal Input Project -->
+<div class="modal fade" id="modalInput" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header">
+                <h5 class="modal-title">Input Project</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="input-project" action="">
+                    <div class="mb-3">
+                        <label for="inputNameProject" class="form-label">Nama Project</label>
+                        <input type="text" class="form-control" id="inputNameProject" aria-describedby="inputNameProject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Detail Project</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputNameCreator" class="form-label">Nama Creator</label>
+                        <input type="text" class="form-control" id="inputNameCreator" aria-describedby="inputNameCreator">
+                    </div>
+                    <div class="mb-3">
+                        <label for="selectDivisi" class="form-label">Divisi</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="1">UI/UX Designer</option>
+                            <option value="2">Web Development</option>
+                            <option value="3">Competitive Programming</option>
+                            <option value="4">Mobile Development</option>
+                            <option value="5">Machine Learning</option>
+                            <option value="6">Project Manager</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basic-url" class="form-label">Project URL</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon3">https://example.com/</span>
+                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basic-url" class="form-label">Project Image</label>
+                        <input type="file" class="form-control" id="inputGroupFile02">
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Detail Project -->
+<div class="modal fade" id="modalDetail1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content border-0 shadow">
+
+            <div class="modal-view d-none" id="modalView">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detail Project</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <img src="./assets/img/no-image.jpg" class="img-fluid rounded mb-3 w-100 modal-img-ratio" alt="">
+                        </div>
+                        <div class="col">
+                            <h4>Judul Project</h4>
+                            <p class="fs-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo magni est et ipsa corrupti iusto vitae eaque. Ipsa ipsum placeat repudiandae voluptate distinctio qui quam, sint cumque asperiores ex maiores.</p>
+                            <p class="fs-6">Dibuat oleh: <b>Taylor Swift</b></p>
+                            <p class="fs-6">Divisi : Mobile</p>
+                            <p class="fs-6">Tanggal: 1 Januari 2026</p>
+                            <p class="fs-6">Link: <a href="https://google.com">https://google.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapus">
+                        <i class="bi bi-trash"></i> Hapus
+                    </button>
+                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-pencil"></i> Edit Data</button>
+                </div>
+            </div>
+
+            <div class="modal-edit" id="modalEdit">
+                <form class="needs-validation" novalidate>
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title fw-bold">Edit Project</h5>
+                        <button type="button" class="btn-close btn-close-white" onclick="toggleEditMode(false)"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label fw-bold">Nama Project</label>
+                            <input type="text" class="form-control" id="inputTitle" value="Project Alpha" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-bold">Deskripsi</label>
+                            <textarea class="form-control" id="inputDesc" rows="4" required>Ini adalah deskripsi lengkap...</textarea>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary" onclick="toggleEditMode(false)">Batal</button>
+                        <button type="submit" class="btn btn-success">Simpan Perubahan</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="./js/app.js"></script>
 </body>

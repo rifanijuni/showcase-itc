@@ -62,3 +62,14 @@ body {
     background-color: #f8f9fa !important;
     color: #6c757d !important;
 }
+
+.modal-header {
+    background-color: #0F5A3E !important; 
+    color: white;
+}
+
+.modal-img-ratio {
+  height: 300px; 
+  object-fit: cover; 
+  object-position: center; 
+}
