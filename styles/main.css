@@ -59,8 +59,13 @@ body {
 }
 
 .text-bg-secondary {
-    background-color: #f8f9fa !important;
-    color: #6c757d !important;
+    background-color: #e3e3e3 !important;
+    color: #54575b !important;
+}
+
+.text-bg-purple {
+    background-color: #f3e8ff !important; 
+    color: #6f42c1 !important; 
 }
 
 .modal-header {

@@ -35,14 +35,14 @@
         </button>
     </div>
 
-    <div class="container text-left mt-3">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+    <section class="container text-left mt-3">
+        <div class="row row-cols-1 row-cols-md-3 g-4 main-content">
             <div class="col">
                 <div class="card h-100 shadow-sm" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modalDetail1">
                     <img src="./assets/img/no-image.jpg" class="card-img-top card-img-ratio" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <span class="badge rounded-pill text-bg-primary mb-2">Mobile</span> 
+                        <span class="badge rounded-pill text-bg-primary mb-2">Mobile Development</span> 
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                     <div class="card-footer bg-white border-top-1 mb-1"> 
@@ -58,7 +58,7 @@
                     <img src="./assets/img/no-image.jpg" class="card-img-top card-img-ratio" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <span class="badge rounded-pill text-bg-success mb-2">Website</span>
+                        <span class="badge rounded-pill text-bg-success mb-2">Web Development</span>
                         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                     </div>
                     <div class="card-footer bg-white border-top-1 mb-1"> 
@@ -74,7 +74,7 @@
                 <img src="./assets/img/no-image.jpg" class="card-img-top card-img-ratio" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <span class="badge rounded-pill text-bg-warning mb-2">AI/ML</span>
+                    <span class="badge rounded-pill text-bg-warning mb-2">Machine Learning</span>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
                 <div class="card-footer bg-white border-top-1 mb-1"> 
@@ -90,7 +90,7 @@
                     <img src="./assets/img/no-image.jpg" class="card-img-top card-img-ratio" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <span class="badge rounded-pill text-bg-info mb-2">UI/UX</span>
+                        <span class="badge rounded-pill text-bg-info mb-2">UI/UX Designer</span>
                         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                     </div>
                     <div class="card-footer bg-white border-top-1 mb-1"> 
@@ -106,7 +106,7 @@
                 <img src="./assets/img/no-image.jpg" class="card-img-top card-img-ratio" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                        <span class="badge rounded-pill text-bg-secondary mb-2">CP</span>
+                        <span class="badge rounded-pill text-bg-secondary mb-2">Competitive Programming</span>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
                 <div class="card-footer bg-white border-top-1 mb-1"> 
@@ -117,8 +117,23 @@
                 </div>
                 </div>
             </div>
+            <div class="col">
+            <div class="card h-100">
+                <img src="./assets/img/no-image.jpg" class="card-img-top card-img-ratio" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <span class="badge rounded-pill text-bg-purple mb-2">Project Manager</span>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+                <div class="card-footer bg-white border-top-1 mb-1"> 
+                    <div class="d-flex align-items-center"> <img src="./assets/img/avatar.png" alt="User Avatar" class="avatar-circle me-3"> 
+                        <div class="d-flex flex-column"> <span class="fw-bold text-dark">Taylor Swift</span> </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        </div>
+    </section>
 </main>
 
 <!-- Modal Input Project -->
@@ -126,27 +141,33 @@
     <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content border-0 shadow">
             <div class="modal-header">
-                <h5 class="modal-title">Input Project</h5>
+                <h5 class="modal-title fw-bold">Input Project</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <form id="input-project" action="">
+            <form id="input-project" action="" class="needs-validation" novalidate>
+                <div class="modal-body">
                     <div class="mb-3">
-                        <label for="inputNameProject" class="form-label">Nama Project</label>
-                        <input type="text" class="form-control" id="inputNameProject" aria-describedby="inputNameProject">
+                        <label for="inputNameProject" class="form-label fw-bold">Project Name</label>
+                        <input type="text" class="form-control" id="inputNameProject" placeholder="e.g. ITC Showcase Website" required>
+                        <div class="invalid-feedback">Project name is required.</div>
                     </div>
+
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Detail Project</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="inputDetailProject" class="form-label fw-bold">Detail Project</label>
+                        <textarea class="form-control" id="inputDetailProject" rows="3" placeholder="Describe your project here..." required></textarea>
+                        <div class="invalid-feedback">Project detail is required.</div>
                     </div>
+
                     <div class="mb-3">
-                        <label for="inputNameCreator" class="form-label">Nama Creator</label>
-                        <input type="text" class="form-control" id="inputNameCreator" aria-describedby="inputNameCreator">
+                        <label for="inputCreator" class="form-label fw-bold">Creator</label>
+                        <input type="text" class="form-control" id="inputCreator" placeholder="e.g. Rifani Juniarti" required>
+                        <div class="invalid-feedback">Creator name is required.</div>
                     </div>
+
                     <div class="mb-3">
-                        <label for="selectDivisi" class="form-label">Divisi</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected></option>
+                        <label for="inputSelectDivision" class="form-label fw-bold">Division</label>
+                        <select class="form-select" id="inputSelectDivision" required>
+                            <option selected disabled value="">Choose a division...</option>
                             <option value="1">UI/UX Designer</option>
                             <option value="2">Web Development</option>
                             <option value="3">Competitive Programming</option>
@@ -154,22 +175,28 @@
                             <option value="5">Machine Learning</option>
                             <option value="6">Project Manager</option>
                         </select>
+                        <div class="invalid-feedback">Please select a division.</div>
                     </div>
+
                     <div class="mb-3">
-                        <label for="basic-url" class="form-label">Project URL</label>
-                        <div class="input-group">
-                            <span class="input-group-text" id="basic-addon3">https://example.com/</span>
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                        <label for="inputUrlProject" class="form-label fw-bold">Project URL</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text">https://</span>
+                            <input type="text" class="form-control" id="inputUrlProject" placeholder="github.com/username/project" required>
+                            <div class="invalid-feedback">Please enter a valid URL.</div>
                         </div>
                     </div>
+
                     <div class="mb-3">
-                        <label for="basic-url" class="form-label">Project Image</label>
-                        <input type="file" class="form-control" id="inputGroupFile02">
+                        <label for="inputImage" class="form-label fw-bold">Project Image</label>
+                        <input type="file" class="form-control" id="inputImage" accept="image/*">
+                        <div class="invalid-feedback" id="fileFeedback">Please upload an image (Max 500KB).</div>
                     </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
-                </form>
-            </div>
-            
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="submit" class="btn btn-success">Submit Project</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -180,55 +207,106 @@
     <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content border-0 shadow">
 
-            <div class="modal-view d-none" id="modalView">
+            <!-- View Detail -->
+            <div class="modal-view" id="modalView">
                 <div class="modal-header">
-                    <h5 class="modal-title">Detail Project</h5>
+                    <h5 class="modal-title fw-bold">Detail Project</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <div class="col">
-                            <img src="./assets/img/no-image.jpg" class="img-fluid rounded mb-3 w-100 modal-img-ratio" alt="">
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-md-5">
+                            <img src="./assets/img/no-image.jpg" class="img-fluid rounded shadow-sm w-100 modal-img-ratio" alt="Project Image" id="detailImage">
                         </div>
-                        <div class="col">
-                            <h4>Judul Project</h4>
-                            <p class="fs-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo magni est et ipsa corrupti iusto vitae eaque. Ipsa ipsum placeat repudiandae voluptate distinctio qui quam, sint cumque asperiores ex maiores.</p>
-                            <p class="fs-6">Dibuat oleh: <b>Taylor Swift</b></p>
-                            <p class="fs-6">Divisi : Mobile</p>
-                            <p class="fs-6">Tanggal: 1 Januari 2026</p>
-                            <p class="fs-6">Link: <a href="https://google.com">https://google.com</a></p>
+                        <div class="col-md-7">
+                            <span class="badge text-bg-success mb-2" id="detailDivision">Web Development</span>
+                            <h3 id="detailNameProject" class="fw-bold mb-3">ITC Showcase Website</h3>
+                            
+                            <strong>Deskripsi Project</strong>
+                            <p class="fs-6" id="detailProject">Ini adalah deskripsi lengkap mengenai project ITC Showcase yang berisi berbagai portofolio divisi. </p>
+                            
+                            <hr>
+                            
+                            <div class="mt-3">
+                                <p class="mb-2 fs-6"><i class="bi bi-person-fill me-2 text-primary"></i> <strong>Creator:</strong> <span id="detailCreator">Rifani Juniarti</span></p>
+                                <p class="mb-2 fs-6"><i class="bi bi-link-45deg me-2 text-primary fs-5"></i> <strong>URL:</strong> <a href="https://github.com/username/project" target="_blank" id="detailUrlProject">github.com/username/project</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapus">
-                        <i class="bi bi-trash"></i> Hapus
+                <div class="modal-footer bg-light justify-content-between">
+                    <button type="button" class="btn btn-danger" id="btnDeleteProject">
+                        <i class="bi bi-trash"></i> Hapus Project
                     </button>
-                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-pencil"></i> Edit Data</button>
+                    <button type="button" class="btn btn-success px-4" onclick="toggleEditMode(true)">
+                        <i class="bi bi-pencil me-1"></i> Edit Data
+                    </button>
                 </div>
             </div>
 
-            <div class="modal-edit" id="modalEdit">
-                <form class="needs-validation" novalidate>
+            <!-- Edit -->
+            <div class="modal-edit d-none" id="modalEdit">
+                <form id="edit-project" class="needs-validation" novalidate>
                     <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title fw-bold">Edit Project</h5>
+                        <h5 class="modal-title fw-bold"><i class="bi bi-pencil-square me-2"></i>Edit Project</h5>
                         <button type="button" class="btn-close btn-close-white" onclick="toggleEditMode(false)"></button>
                     </div>
                     <div class="modal-body p-4">
                         <div class="row g-3">
-                        <div class="col-12">
-                            <label class="form-label fw-bold">Nama Project</label>
-                            <input type="text" class="form-control" id="inputTitle" value="Project Alpha" required>
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label fw-bold">Deskripsi</label>
-                            <textarea class="form-control" id="inputDesc" rows="4" required>Ini adalah deskripsi lengkap...</textarea>
-                        </div>
+                            
+                            <div class="col-md-12">
+                                <label for="editNameProject" class="form-label fw-bold">Project Name</label>
+                                <input type="text" class="form-control" id="editNameProject" value="ITC Showcase Website" required>
+                                <div class="invalid-feedback">Project name is required.</div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="editDetailProject" class="form-label fw-bold">Detail Project</label>
+                                <textarea class="form-control" id="editDetailProject" rows="4" required>Ini adalah deskripsi lengkap mengenai project ITC Showcase yang mencakup berbagai portofolio divisi. Website ini dibangun untuk menampilkan inovasi terbaik.</textarea>
+                                <div class="invalid-feedback">Project detail is required.</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="editCreator" class="form-label fw-bold">Creator</label>
+                                <input type="text" class="form-control" id="editCreator" value="Rifani Juniarti" required>
+                                <div class="invalid-feedback">Creator name is required.</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="editSelectDivision" class="form-label fw-bold">Division</label>
+                                <select class="form-select" id="editSelectDivision" required>
+                                    <option disabled value="">Choose a division...</option>
+                                    <option value="1">UI/UX Designer</option>
+                                    <option value="2" selected>Web Development</option>
+                                    <option value="3">Competitive Programming</option>
+                                    <option value="4">Mobile Development</option>
+                                    <option value="5">Machine Learning</option>
+                                    <option value="6">Project Manager</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a division.</div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="editUrlProject" class="form-label fw-bold">Project URL</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">https://</span>
+                                    <input type="text" class="form-control" id="editUrlProject" value="github.com/username/project" required>
+                                    <div class="invalid-feedback">Please enter a valid URL.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="editGroupFile02" class="form-label fw-bold">Update Project Image <span class="text-secondary fw-normal">(Opsional)</span></label>
+                                <input type="file" class="form-control" id="editGroupFile02" accept="image/*">
+                                <div class="form-text">Biarkan kosong jika tidak ingin mengubah gambar. Maksimal ukuran 500KB.</div>
+                                <div class="invalid-feedback" id="editFileFeedback">Ukuran gambar tidak boleh lebih dari 500KB.</div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="modal-footer bg-light">
                         <button type="button" class="btn btn-secondary" onclick="toggleEditMode(false)">Batal</button>
-                        <button type="submit" class="btn btn-success">Simpan Perubahan</button>
+                        <button type="submit" class="btn btn-success px-4"><i class="bi bi-save me-1"></i> Simpan Perubahan</button>
                     </div>
                 </form>
             </div>
@@ -238,6 +316,7 @@
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>
