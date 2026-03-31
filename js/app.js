@@ -157,7 +157,10 @@ if (formInput) {
         formInput.classList.add('was-validated');
 
         if (!isValid) {
-            Swal.fire({ icon: 'error', title: 'Form Belum Lengkap!', text: 'Periksa kembali form Anda.' });
+            Swal.fire({ 
+                icon: 'error', 
+                title: 'Form Belum Lengkap!', 
+                text: 'Periksa kembali form Anda.' });
             return;
         }
 
@@ -216,9 +219,7 @@ window.openDetailModal = function(id) {
     document.getElementById('detailDivision').innerText = divInfo.name;
     document.getElementById('detailDivision').className = `badge ${divInfo.color} mb-2`; 
     document.getElementById('detailUrlProject').innerText = selectedProject.url;
-    document.getElementById('detailUrlProject').urlElement.onclick = function() {
-        window.open("https://" + selectedProject.url, '_blank');
-    };
+    document.getElementById('detailUrlProject').href = "https://" + selectedProject.url;
 
     // edit
     document.getElementById('editNameProject').value = selectedProject.title;
@@ -255,7 +256,7 @@ modalDetailElement.addEventListener('hidden.bs.modal', function () {
 });
 
 const formEdit = document.getElementById('edit-project');
-const editFileInput = document.getElementById('editGroupFile02');
+const editFileInput = document.getElementById('editImage');
 
 if (formEdit) {
     formEdit.addEventListener('submit', async function (event) {
@@ -341,7 +342,12 @@ if (btnDelete) {
             confirmButtonText: 'Ya, Hapus!'
         }).then((result) => {
             if (result.isConfirmed) {
-                Swal.fire({ title: 'Menghapus...', allowOutsideClick: false, didOpen: () => { Swal.showLoading(); } });
+                Swal.fire({ 
+                    title: 'Menghapus...', 
+                    allowOutsideClick: false, 
+                    didOpen: () => { 
+                        Swal.showLoading(); 
+                    } });
 
                 setTimeout(() => {
                     projects = projects.filter(p => p.id !== idToDelete);
